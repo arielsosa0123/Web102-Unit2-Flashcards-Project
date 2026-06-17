@@ -60,18 +60,31 @@ function App() {
   // Number of cards shown in the header count
   const CardCount = 10;
 
-  // Position in the deck of the card currently on screen
+  // The deck of cards (no pre-shuffle needed — Next picks at random each click)
+  const deck = fishCards;
+
+  // Index of the card currently on screen
   const [index, setIndex] = useState(0);
 
-  // Shuffle a copy of the cards once on load so the order is random but fixed
-  const [deck] = useState(() =>
-    [...fishCards].sort(() => Math.random() - 0.5)
-  );
+  // Indexes of cards we've already shown, so Back can retrace our path
+  const [history, setHistory] = useState([]);
 
-  // Step forward / backward through the deck; % wraps around the ends
-  const nextCard = () => setIndex((index + 1) % deck.length);
-  const prevCard = () =>
-    setIndex((index - 1 + deck.length) % deck.length);
+  // Next picks a random card each click (not sequential), avoiding a repeat
+  const nextCard = () => {
+    let next = Math.floor(Math.random() * deck.length);
+    while (deck.length > 1 && next === index) {
+      next = Math.floor(Math.random() * deck.length);
+    }
+    setHistory([...history, index]);
+    setIndex(next);
+  };
+
+  // Back returns to the actual previously-shown card
+  const prevCard = () => {
+    if (history.length === 0) return;
+    setIndex(history[history.length - 1]);
+    setHistory(history.slice(0, -1));
+  };
 
   // The card object we're displaying right now
   const current = deck[index];
@@ -95,7 +108,7 @@ function App() {
 
       {/* Navigation buttons */}
       <div className="nav">
-        <button onClick={prevCard}>⬅ Back</button>
+        <button onClick={prevCard} disabled={history.length === 0}>⬅ Back</button>
         <button onClick={nextCard}>Next ➡</button>
       </div>
 
