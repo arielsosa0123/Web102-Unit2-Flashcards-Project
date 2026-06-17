@@ -2,7 +2,7 @@
 
 Submitted by: Ariel Sosa
 
-This website will display 
+This website will display flashcaards of 10 different fish species. User must identify each.
 
 Time spent: 3 hours spent in total
 
@@ -52,7 +52,7 @@ GIF created with ScreenToGif.com
 
 Describe any challenges encountered while building the app.
 
-******
+Organizing my thoughts and implementing slowly.
 
 
 ## License
