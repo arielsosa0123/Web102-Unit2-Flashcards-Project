@@ -87,11 +87,70 @@ body {
   gap: 0.75rem;
 }
 
+/* Guess input area */
+.guess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Input box and Submit button sit side by side */
+.guessRow {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.guessRow input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  outline: none;
+  width: 240px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.guessRow button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #14233a;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.guessRow button:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+/* Correct guess: green outline, light green fill */
+.input-correct {
+  border-color: #2e7d32 !important;
+  background-color: rgba(46, 125, 50, 0.15);
+}
+
+/* Incorrect guess: red outline, light red fill */
+.input-incorrect {
+  border-color: #c62828 !important;
+  background-color: rgba(198, 40, 40, 0.15);
+}
+
 /* Navigation buttons */
 .nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+/* Space the Shuffle row below the Back/Next row */
+.nav + .nav {
+  margin-top: 1rem;
 }
 
 .nav button {
@@ -108,4 +167,15 @@ body {
 .nav button:hover {
   background-color: white;
   transform: scale(1.1);
+}
+
+/* At an edge of the deck: fade the button and strip its hover/click affordance */
+.nav button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.nav button:disabled:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: none;
 }

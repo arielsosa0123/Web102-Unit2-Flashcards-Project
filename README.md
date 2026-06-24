@@ -1,12 +1,16 @@
-# WEB102 Project#2 - Flashcards 
+# WEB102 Project#2 - Flashcards - Part 1 & 2
 
 Submitted by: Ariel Sosa
 
+Part 1:
 This website will display flashcaards of 10 different fish species. User must identify each.
 
 Time spent: 3 hours spent in total
 
-## Required Features
+Part 2:
+The Second part of this project will include a feature to allow the user to guess the anser before flipping the card. A submit button, a Shuffle Cards button, and a streak counter. 
+
+## Required Features Part 1:
 
 The app displays the title of the card set, a short description, and the total number of cards
 
@@ -35,9 +39,82 @@ Clicking the next button displays a random new card
 
     -(Note: proceeding through cards in sequential order will not receive credit for this feature — the next card must be selected at random)
 
+## Required Features Part 2: 
+
+The user can submit a guess into an input box before seeing the flipside of a card
+
+    - Application features a clearly labeled input box with a submit button where users can type in a guess
+
+    - Clicking on the submit button with an incorrect answer shows visual feedback that it is wrong
+
+    - Clicking on the submit button with a correct answer shows visual feedback that it is correct
+
+The user can navigate through an ordered list of cards
+
+    - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+
+    - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+
+    - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
+
+## Stretch Features for Part 2
+
+Users can use a shuffle button to randomize the order of the cards
+    - Cards should remain in the same sequence (NOT randomized) unless the shuffle button is clicked
+
+    - Cards should change to a random sequence once the shuffle button is clicked
+
+A user’s answer may be counted as correct even when it is slightly different from the target answer
+
+    - Examples: ignoring uppercase/lowercase discrepancies, ignoring punctuation discrepancies, matching only for a particular part of the answer rather than the whole answer
+
+A counter displays the user’s current and longest streak of correct responses
+
+    - A current counter increments when a user guesses an answer correctly
+
+    - The current counter resets to 0 when a user guesses an answer incorrectly
+
+    - A separate counter tracks the longest streak, updating if the value of the current streak counter exceeds the value of the longest streak counter
+
+A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+
+    - The user can mark a card to indicate that it has been mastered
+    
+    - Mastered cards are removed from the pool of displayed cards and added to a list of mastered cards
+
+## The following required functionality is completed:
+
+- [X] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - Application features a clearly labeled input box with a submit button where users can type in a guess
+  - Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong 
+  -  Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [X] **The user can navigate through an ordered list of cardss**
+  - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
+
+## The following optional features are implemented:
+
+
+- [X] Users can use a shuffle button to randomize the order of the cards
+  - Cards should remain in the same sequence (**NOT** randomized) unless the shuffle button is clicked 
+  - Cards should change to a random sequence once the shuffle button is clicked
+- [X] A user’s answer may be counted as correct even when it is slightly different from the target answer
+  - Answers are considered correct even if they only partially match the answer on the card 
+  - Examples: ignoring uppercase/lowercase discrepancies, ignoring punctuation discrepancies, matching only for a particular part of the answer rather than the whole answer
+- [X] A counter displays the user’s current and longest streak of correct responses
+  - The current counter increments when a user guesses an answer correctly
+  - The current counter resets to 0 when a user guesses an answer incorrectly
+  - A separate counter tracks the longest streak, updating if the value of the current streak counter exceeds the value of the longest streak counter 
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+  - The user can mark a card to indicate that it has been mastered
+  - Mastered cards are removed from the pool of displayed cards and added to a list of mastered cards
+
 ## Video Walkthrough
 
-Here's a walkthrough of implemented features:
+Part 1:
+
+Here's a walkthrough of implemented features for Part 1:
 
 <img src='Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -48,12 +125,22 @@ GIF created with ScreenToGif.com
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
+Part 2:
+
+Here's a walkthrough of implemented features for Part 2:
+
+<img src='Animation2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ## Notes
 
 Describe any challenges encountered while building the app.
+Part 1:
 
-Organizing my thoughts and implementing slowly.
+    Organizing my thoughts and implementing slowly.
 
+Part 2:
+
+    I have not worked with Forms and taking input in awhile. This was a bit of a challenge to overcome. As well as still getting acustomed to using this enviroment and organizing my code properly.
 
 ## License
 
